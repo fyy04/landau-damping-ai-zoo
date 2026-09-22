@@ -11,39 +11,35 @@
 当前阶段以研究路线梳理和代码索引为主，尚未形成可直接排名的统一 benchmark。
 
 ## 1. 物理问题
-
-本仓库主要关注无碰撞静电等离子体中的 Landau damping。典型的 1D1V Vlasov-Poisson 系统为
+本仓库主要关注无碰撞静电等离子体中的 Landau damping。典型的 1D1V Vlasov-Poisson 方程：
 
 $$
-\frac{\partial f}{\partial t}
-+v\frac{\partial f}{\partial x}
--E\frac{\partial f}{\partial v}=0,
+\frac{\partial f}{\partial t} + v\frac{\partial f}{\partial x} - E\frac{\partial f}{\partial v} = 0
 $$
 
-\[
-n(x,t)=\int f(x,v,t)\,dv,\qquad
-\frac{\partial E}{\partial x}=1-n.
-\]
+$$
+\frac{\partial E}{\partial x} = 1-n,\quad n(x,t)=\int f(x,v,t)\,dv
+$$
 
-其中 \(f(x,v,t)\) 是电子相空间分布函数。通过对速度积分，可以得到密度、流速、压力和热流：
+其中 $f(x,v,t)$ 是电子相空间分布函数。通过对速度积分，可以得到密度、流速、压力、热流：
 
-\[
-n=\int f\,dv,\qquad
-u=\frac{1}{n}\int vf\,dv,
-\]
+$$
+n=\int f\,dv,\quad u=\frac{1}{n}\int v f\,dv
+$$
 
-\[
-p=\int (v-u)^2f\,dv,\qquad
-q=\int (v-u)^3f\,dv.
-\]
+$$
+p=\int (v-u)^2 f\,dv,\quad q=\int (v-u)^3 f\,dv
+$$
 
-低阶流体方程的压力演化需要热流梯度
+低阶流体方程的压力演化需要热流梯度：
 
-\[
-g=\frac{\partial q}{\partial x},
-\]
+$$
+g=\frac{\partial q}{\partial x}
+$$
 
-但有限个低阶矩通常不能唯一确定更高阶矩，这就是流体闭合问题。
+但有限个低阶矩通常不能唯一确定更高阶矩，这就是**流体闭合问题**。
+
+
 
 常见初始条件为
 
