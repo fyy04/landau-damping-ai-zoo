@@ -1,6 +1,3 @@
-下面内容可以直接替换 GitHub 编辑框里的全部内容。当前版本不比较师兄的工作，也不声称已经复现论文代码。
-
-````markdown
 # Landau Damping AI Zoo
 
 面向 Landau damping 人工智能建模方法的文献、模型与代码整理仓库。
