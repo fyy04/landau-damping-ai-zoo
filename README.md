@@ -58,13 +58,13 @@ $$
 
 闭合模型保留低阶流体方程，由 AI 预测缺失的高阶项，再通过数值积分器推进：
 
-\[
+$$
 [n,u,p,E]_{\mathrm{current/history}}
 \xrightarrow{\text{AI closure}}
 \widehat{\partial_x q}
 \xrightarrow{\text{fluid solver}}
 [n,u,p,E]_{t+\Delta t}.
-\]
+$$
 
 主要子类包括：
 
