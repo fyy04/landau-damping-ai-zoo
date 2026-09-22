@@ -14,11 +14,11 @@
 
 本仓库主要关注无碰撞静电等离子体中的 Landau damping。典型的 1D1V Vlasov-Poisson 系统为
 
-\[
+$$
 \frac{\partial f}{\partial t}
 +v\frac{\partial f}{\partial x}
 -E\frac{\partial f}{\partial v}=0,
-\]
+$$
 
 \[
 n(x,t)=\int f(x,v,t)\,dv,\qquad
